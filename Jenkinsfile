@@ -65,7 +65,7 @@ pipeline {
     stages {
         stage('Checkout SCM') {
             steps {
-                git branch: "${BRANCH}", url: "${REPO_URL}", credentialsId: 'github-creds'
+                git branch: "${BRANCH}", url: "${REPO_URL}", credentialsId: 'Test'
             }
         }
 
