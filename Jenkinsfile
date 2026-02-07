@@ -85,7 +85,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh 'echo "Updated from Jenkins at $(date)" >> sample.txt'
+                    //sh 'echo "Updated from Jenkins at $(date)" >> sample.txt'
 
                     sh 'git config user.email "wali.haider@9to5digitalsolutions.com"'
                     sh 'git config user.name "SyedWali1"'
