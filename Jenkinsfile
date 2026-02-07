@@ -93,6 +93,9 @@ pipeline {
                     sh 'git add sample.txt'
                     sh 'git commit -m "Automated update from Jenkins" || echo "No changes to commit"'
 
+                    
+                    sh "git pull --rebase https://${GITHUB_CREDS_USR}:${GITHUB_CREDS_PSW}@github.com/SyedWali1/DevOps.git ${BRANCH} || echo 'No remote changes to rebase'"
+                    
                     sh "git push https://${GITHUB_CREDS_USR}:${GITHUB_CREDS_PSW}@github.com/SyedWali1/DevOps.git ${BRANCH}"
                 }
             }
